@@ -1,7 +1,7 @@
 import '../styles/globals.css'
-import type { AppProps, NextWebVitalMetric } from 'next/app'
+import type { AppProps, NextWebVitalsMetric } from 'next/app'
 
-export function reportWebVitals(metric: NextWebVitalMetric) {
+export function reportWebVitals(metric: NextWebVitalsMetric) {
   switch (metric.name) {
     case 'FCP':
       console.log(`FCP: ${Math.round(metric.value * 10) / 10}`)
