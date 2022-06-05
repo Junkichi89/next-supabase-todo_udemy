@@ -1,6 +1,26 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps, NextWebVitalMetric } from 'next/app'
 
+export function reportWebVitals(metric: NextWebVitalMetric) {
+  switch (metric.name) {
+    case 'FCP':
+      console.log(`FCP: ${Math.round(metric.value * 10) / 10}`)
+      break
+    case 'LCP':
+      console.log(`LCP: ${Math.round(metric.value * 10) / 10}`)
+      break
+    case 'TTFB':
+      console.log(`TTFB: ${Math.round(metric.value * 10) / 10}`)
+      break
+    case 'Next.js-hydration':
+      console.log(`Hydration: ${Math.round(metric.value * 10) / 10} -> ${
+        Math.round((metric.startTime + metric.value) * 10) /10
+      }`)
+      break
+    default:
+      break
+  }
+}
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }

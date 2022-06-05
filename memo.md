@@ -1,0 +1,3 @@
+import cost 自動でimportのコストを判定してくれる
+
+tailwindはライブラリごとの設定を確認し、登録する
