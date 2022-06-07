@@ -1,5 +1,5 @@
 import create from 'zustand'
-import { EditedTask, EditedNotice } from '../types/typess';
+import { EditedTask, EditedNotice } from './types/types';
 
 type State = {
   editedTask: EditedTask
